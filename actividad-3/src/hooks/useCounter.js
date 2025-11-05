@@ -1,19 +1,10 @@
 import { useState } from "react";
 
-export const useCounter = () => {
+export const useCounter = (initialValue = 1) => {
     const [count, setCount] = useState(initialValue);
 
-    const handleIncrement = (number) => {
-        setCount(count + number)
-    };
-
-    const handleDecrement = (number) => {
-        const resta = count - number;
-
-        if (resta < 0) return;
-
-        setCount(count - number)
-    };
+    const handleIncrement = () => setCount((prev) => prev + 1)
+    const handleDecrement = () => setCount((prev) => prev > 1 ? prev - 1 : prev);
 
     const handleReset = () => {
         setCount(initialValue)
