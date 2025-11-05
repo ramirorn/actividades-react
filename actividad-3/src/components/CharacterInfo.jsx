@@ -1,3 +1,4 @@
+import "./CharacterInfo.css";
 export const CharacterInfo = ({ character }) => {
   return (
     <div className="character-card">

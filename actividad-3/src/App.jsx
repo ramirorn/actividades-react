@@ -19,8 +19,8 @@ function App() {
       {data && !loading && <CharacterInfo character={data} />}
       <div>
         <button onClick={handleDecrement}>Anterior</button>
-        <button onClick={handleIncrement}>Siguiente</button>
         <button onClick={handleReset}>Inicio</button>
+        <button onClick={handleIncrement}>Siguiente</button>
       </div>
     </main>
   );
