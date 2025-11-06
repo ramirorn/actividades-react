@@ -25,29 +25,28 @@ export const Login = ({ onLogin }) => {
 
   return (
     <>
-    <form onSubmit={(event) => handleSubmit(event, onLogin)}>
-      <input
-        type="text"
-        name="username"
-        placeholder="username"
-        value={username}
-        onChange={handleChange}
-      />
+      <form onSubmit={(event) => handleSubmit(event, onLogin)}>
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          value={username}
+          onChange={handleChange}
+        />
 
-      <input
-        type="text"
-        name="password"
-        placeholder="password"
-        value={password}
-        onChange={handleChange}
-      />
+        <input
+          type="text"
+          name="password"
+          placeholder="password"
+          value={password}
+          onChange={handleChange}
+        />
 
-      <button>Iniciar Sesion</button>
-    </form>
-    <div>
-
-      <button onClick={handleReset}>Reiniciar</button>
-    </div>
+        <button>Iniciar Sesion</button>
+      </form>
+      <div>
+        <button onClick={handleReset}>Reiniciar</button>
+      </div>
     </>
   );
 };
